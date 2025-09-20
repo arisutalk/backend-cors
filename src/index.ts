@@ -8,10 +8,10 @@ import { Scalar } from "@scalar/hono-api-reference";
 type Bindings = {
     // You can write your own bindings or env secret here.
 };
-const app = new Hono<{ Bindings: Bindings }>();
-app.use(requestId(), cors());
-
-app.route("/hello", helloRoute);
+const app = new Hono<{ Bindings: Bindings }>()
+    .use(requestId(), cors())
+    .route("/proxy", helloRoute)
+    .get("/docs", Scalar({ url: "/openapi.json" }));
 app.get(
     "/openapi.json",
     openAPIRouteHandler(app, {
@@ -25,6 +25,6 @@ app.get(
         },
         exclude: ["/openapi.json", "/docs"],
     })
-);
-app.get("/docs", Scalar({ url: "/openapi.json" }));
+)
+
 export default app;
