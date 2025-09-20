@@ -25,6 +25,6 @@ app.get(
         },
         exclude: ["/openapi.json", "/docs"],
     })
-)
+);
 
 export default app;

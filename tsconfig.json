@@ -6,17 +6,10 @@
         "strict": true,
         "skipLibCheck": true,
         "sourceMap": true,
-        "lib": [
-            "ESNext"
-        ],
-        "types": [
-            "vite/client"
-        ],
+        "lib": ["ESNext"],
+        "types": ["vite/client"],
         "jsx": "react-jsx",
-        "jsxImportSource": "hono/jsx",
+        "jsxImportSource": "hono/jsx"
     },
-    "include": [
-        "src",
-        "test"
-    ]
+    "include": ["src", "test"]
 }

@@ -3,6 +3,10 @@
     "upload_source_maps": true,
     "name": "arisutalk-cors-proxy",
     "compatibility_date": "2025-08-03",
+    "route": {
+        "custom_domain": true,
+        "pattern": "cors.back.arisutalk.moe",
+    },
     "main": "./src/index.ts",
     "send_metrics": false,
 }
